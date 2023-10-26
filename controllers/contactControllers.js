@@ -2,11 +2,7 @@ const contactsFolder = require("../models/contactsModel");
 const {
   addContactValidationSchema,
   updateSchema,
-} = require("../utils/validation/contactValidationSchemas");
-
-// const {
-//   paginationValidationSchema,
-// } = require("../utils/validation/paginationValidationSchemas");
+} = require("../utils/validation/validateContact.js");
 
 const getAll = async (req, res) => {
   const { page, limit } = req.query;
