@@ -1,7 +1,6 @@
 const express = require("express");
 
 const authenticate = require("../../middlewares/auth");
-
 const upload = require("../../middlewares/uploads");
 
 const ctrl = require("../../controllers/authentication");
@@ -22,5 +21,7 @@ router.patch(
   upload.single("avatar"),
   ctrl.changeAvatar
 );
+
+router.post("/verify/:verificationToken", ctrl.verify);
 
 module.exports = router;
